@@ -1,5 +1,5 @@
 import streamlit as st
-from transformers import PreTrainedTokenizerFast, BartForConditionalGeneration
+from transformers import PreTrainedTokenizerFast,BartTokenizer, BartForConditionalGeneration
 st.title('Squeezer')
 
 # Application run : stremalit run Squeezer.py
@@ -34,7 +34,6 @@ with st.container():
                     st.write(tokenizer.decode(summary_text_ids[0], skip_special_tokens=True))
                 st.success('Done!')
 
-from transformers import BartTokenizer, BartForConditionalGeneration, pipeline
 
 with st.container():
     st.title("Summarization")
